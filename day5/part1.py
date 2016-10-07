@@ -13,8 +13,8 @@ def has_double_letters(string):
 def has_three_vowels(string):
     vowels = ['a', 'e', 'i', 'o', 'u']
     used_vowels = 0
-    for vowel in vowels:
-        if vowel in string:
+    for char in string:
+        if char in vowels:
             used_vowels += 1
             if used_vowels > 2:
                 return True
@@ -30,12 +30,7 @@ def has_consecutive_letters(string):
 
 
 def is_nice(string):
-    print(string)
-    print(has_double_letters(string))
-    print(has_three_vowels(string))
-    print(has_consecutive_letters(string))
     return has_double_letters(string) and has_three_vowels(string) and not has_consecutive_letters(string)
-
 
 NICE_STRINGS = 0
 
